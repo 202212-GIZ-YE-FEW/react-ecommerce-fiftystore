@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
     "@mui/material": "^5.11.12",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
