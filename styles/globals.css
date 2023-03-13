@@ -6,5 +6,19 @@
     margin: 0;
     padding: 0;
     outline: none;
+    scrollbar-width: thin;
+}
 
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    border: 10px solid gray;
 }
