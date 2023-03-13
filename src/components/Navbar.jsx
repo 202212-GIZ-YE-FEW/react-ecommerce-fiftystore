@@ -277,7 +277,6 @@ export default function Example() {
                       </div>
                   </form>
                 </div>
-
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <a href="#" className="group -m-2 flex items-center p-2 relative">
