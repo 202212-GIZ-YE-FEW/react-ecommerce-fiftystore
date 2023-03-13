@@ -55,80 +55,6 @@ const navigation = {
         },
       ],
     },
-    {
-      id: 'wodmen',
-      name: 'Women',
-      featured: [
-        {
-          name: 'Top Rating',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Low Price',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-      ],
-    },
-    {
-      id: 'mden',
-      name: 'Men',
-      featured: [
-        {
-          name: 'Top Rating',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-        },
-        {
-          name: 'Low Price',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-      ],
-    },
-    {
-      id: 'woddmen',
-      name: 'Women',
-      featured: [
-        {
-          name: 'Top Rating',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Low Price',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-      ],
-    },
-    {
-      id: 'mdden',
-      name: 'Men',
-      featured: [
-        {
-          name: 'Top Rating',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-        },
-        {
-          name: 'Low Price',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-      ],
-    },
   ],
   pages: [
     { name: 'All Products', href: '#' },
@@ -144,7 +70,8 @@ export default function Example() {
 
   return (
     <div className="bg-white">
-            <Transition.Root show={open} as={Fragment}>
+      {/* Mobile */}
+      <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
@@ -179,8 +106,6 @@ export default function Example() {
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
-
-                {/* Links */}
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4 overflow-x-auto">
@@ -222,7 +147,6 @@ export default function Example() {
                     ))}
                   </Tab.Panels>
                 </Tab.Group>
-
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
