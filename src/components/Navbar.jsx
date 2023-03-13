@@ -1,21 +1,7 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import Link from "next/link"
 const navigation = {
   categories: [
     {
@@ -137,9 +123,6 @@ export default function Example() {
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                 {item.name}
                               </a>
-                              <p aria-hidden="true" className="mt-1">
-                                Shop now
-                              </p>
                             </div>
                           ))}
                         </div>
@@ -175,7 +158,7 @@ export default function Example() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <Link href="/">
                   <span className="sr-only">FiftyStore</span>
                   {/* <img
                     className="h-8 w-auto"
@@ -183,7 +166,7 @@ export default function Example() {
                     alt=""
                   /> */}
                   Logo
-                </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -236,9 +219,6 @@ export default function Example() {
                                             <span className="absolute inset-0 z-10" aria-hidden="true" />
                                             {item.name}
                                           </a>
-                                          <p aria-hidden="true" className="mt-1">
-                                            Shop now
-                                          </p>
                                         </div>
                                       ))}
                                     </div>
@@ -279,14 +259,14 @@ export default function Example() {
                 </div>
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2 relative">
+                  <Link href="/cart" className="group -m-2 flex items-center p-2 relative">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
                     />
                     <span className="bg-red-600 text-white text-sm font-medium px-2 py-0.5 rounded-full group-hover:bg-red-800 dark:bg-red-900 dark:text-red-300 absolute bottom-5 left-5">0</span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
