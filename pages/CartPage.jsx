@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-
-function Index() {
-    const [show, setShow] = useState(false);
-    return (
-        <>
-          
-        </>
-    );
+import React from 'react'
+import Cart from '@/src/components/Cart'
+function CartPage() {
+  return (
+    <div>
+<Cart/>
+    </div>
+  )
 }
 
-export default Index;
+export default CartPage
