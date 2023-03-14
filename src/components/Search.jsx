@@ -14,8 +14,8 @@ export const Search = () => {
                         <XMarkIcon className="h-6 w-6 ml-4 cursor-pointer text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true" onClick={() => setSearchModal(false)} />
                         <div className="grow">
-                        <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                        <input type="search" id="search" className="w-full py-2 pr-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-gray-500 rounded-full" placeholder="Search..." required />
+                            <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                            <input type="search" id="search" className="w-full py-2 pr-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-gray-500 rounded-full" placeholder="Search..." required />
                         </div>
                     </div>
                 </>
