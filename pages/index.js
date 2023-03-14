@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { CpuChipIcon } from '@heroicons/react/24/outline'
 import { Inter } from 'next/font/google'
+
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +11,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import '/styles/Home.module.css'
+// Import Components
+import { Product } from "../src/components/Product"
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        {/* <Swiper  className="grid grid-cols-4 gap-4"
+        <Swiper  className="grid grid-cols-4 gap-4"
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
@@ -42,10 +44,10 @@ export default function Home() {
           <SwiperSlide><img src="https://preview.colorlib.com/theme/locksmith/img/hero/hero-2.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/eiser/img/banner/banner-bg.jpg.webp" alt /></SwiperSlide>
-        </Swiper> */}
+        </Swiper>
       </div>
       <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
-        <div className="my-">
+        <div className="">
             <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
                 Shop By Category
             </h3>
@@ -81,8 +83,18 @@ export default function Home() {
             <a href="#" className="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
           </div>
         </div>
-        <div className="my-3">         
-
+        <div className="pb-0.5 my-3">         
+            <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
+                Most Rating Products
+            </h3>
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+          </div>
         </div>
       </main>
     </>
