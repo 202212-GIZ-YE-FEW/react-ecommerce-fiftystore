@@ -11,16 +11,10 @@
 
 img, video {
     min-width: 0;
-    /* width: 100%;
-    object-fit: cover; */
-    /* aspect-ratio: 2 /1; */
 }
 
+/** HOME **/
 /* Swiper Slide   */
-.swiper-slide {
-    /* flex-shrink: 1 !important; */
-}
-
 .swiper-wrapper {
     --left: clamp(1%, 4.5%, 50%) !important;
     position: relative;
@@ -29,13 +23,6 @@ img, video {
 
 .swiper {
     display: flex;
-}
-
-.swiper-slide {
-    /* flex-shrink: 1; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .swiper-pagination {
@@ -49,21 +36,16 @@ img, video {
 .swiper-pagination-bullet-active {
     transition: width .7s ease-in-out;
     width: 60px !important;
-    border-radius: 5px !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+    background-color: rgb(0 0 0) !important;
+    line-height: 20px;
 }
 
 .swiper-slide-active {
     width: clamp(200px, 90vw, 100rem) !important;
 }
 
-.categories>* {
-    flex-basis: 25%;
-    cursor: pointer;
-}
-
-.categories>*:not(:last-child) {
-    @apply border-gray-200 border-r-2
-}
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {

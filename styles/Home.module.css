@@ -1,0 +1,32 @@
+/* Swiper Slide   */
+.swiper-wrapper {
+    --left: clamp(1%, 4.5%, 50%) !important;
+    position: relative;
+    left: var(--left);
+}
+
+.swiper {
+    display: flex;
+}
+
+.swiper-pagination {
+    bottom: 100px !important;
+}
+
+.swiper-pagination {
+    bottom: 100px !important;
+}
+
+.swiper-pagination-bullet-active {
+    transition: width .7s ease-in-out;
+    width: 60px !important;
+    border-radius: 5px !important;
+}
+
+.swiper-slide-active {
+    width: clamp(200px, 90vw, 100rem) !important;
+}
+
+.categories>*:not(:last-child) {
+    @apply border-gray-200 border-r-2
+}
