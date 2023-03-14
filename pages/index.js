@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Swiper  className="grid grid-cols-4 gap-4"
+        {/* <Swiper  className="grid grid-cols-4 gap-4"
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
@@ -42,7 +42,7 @@ export default function Home() {
           <SwiperSlide><img src="https://preview.colorlib.com/theme/locksmith/img/hero/hero-2.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/eiser/img/banner/banner-bg.jpg.webp" alt /></SwiperSlide>
-        </Swiper>
+        </Swiper> */}
       </div>
       <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
         <div className="my-">
@@ -80,6 +80,9 @@ export default function Home() {
             <h2 className="uppercase font-bold mb-5 text-stone-700 text-6xl">STRIPED SHIRTS</h2>
             <a href="#" className="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
           </div>
+        </div>
+        <div className="my-3">         
+
         </div>
       </main>
     </>
