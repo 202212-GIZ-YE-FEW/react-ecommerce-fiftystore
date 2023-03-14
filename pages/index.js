@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // Import Components
+import { Button } from "../src/components/Button"
 import { Product } from "../src/components/Product"
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,21 +56,21 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
                 <div className="relative group flex justify-center items-center h-full w-full">
                   <img className="object-center object-cover h-full w-full" src="https://media1.popsugar-assets.com/files/thumbor/p3aGcIADLrSVbcM5uPa1He-Muv0/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2023/01/11/909/n/1922564/6345bb6b63bf20e195e452.64247813_/i/best-cheap-amazon-clothes-women.png" alt="girl-image" />
-                  <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Women's</a>
+                  <Button href={''} content="women's" additional_style={'z-10 absolute'} />
                 </div>
                 <div className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
                   <div className="relative group flex justify-center items-center h-full w-full">
                     <img className="object-center object-cover h-full w-full" src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg" alt="shoe-image" />
-                    <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Electronics</a>
+                    <Button href={''} content="electronic" additional_style={'z-10 absolute'} />
                   </div>
                   <div className="relative group flex justify-center items-center h-full w-full">
                     <img className="object-center object-cover h-full w-full" src="https://cdn.jewelryimages.net/static/domains/contijewelers/images/store-pics/w1900_q65.jpeg" alt="watch-image" />
-                    <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">jewelry</a>
+                    <Button href={''} content="man's" additional_style={'z-10 absolute'} />
                   </div>
                 </div>
                 <div className="relative group justify-center items-center h-full w-full hidden lg:flex">
                   <img className="object-center object-cover h-full w-full" src="https://images.urbndata.com/is/image/UrbanOutfitters/79871877_020_b?$medium$&qlt=80&fit=constrain" alt="girl-image" />
-                  <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Men's</a>
+                 <Button href={''} content="man's" additional_style={'z-10 absolute'} />
                 </div>
               </div>
             </div>
@@ -80,7 +81,7 @@ export default function Home() {
             <div className="absolute right-20 bottom-30 font-bold bg-stone-400 uppercase py-2 px-5 rounded-full">New</div>
             <span className="uppercase mb-4 text-lg block tracking-wider font-semibold">New Arrivals</span>
             <h2 className="uppercase font-bold mb-5 text-stone-700 text-6xl">STRIPED SHIRTS</h2>
-            <a href="#" className="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
+            <Button href={''} content={'shop now'} />
           </div>
         </div>
         <div className="pb-0.5 my-3">         
@@ -95,6 +96,7 @@ export default function Home() {
             <Product />
             <Product />
           </div>
+          <Button href="#" content={'view more'} additional_style={'block mt-5 mx-auto'} />
         </div>
       </main>
     </>
