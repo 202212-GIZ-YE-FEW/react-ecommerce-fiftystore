@@ -46,20 +46,7 @@ export default function Home() {
         </Swiper>
       </div>
       <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
-        {/* <div className="pb-0.5 mb-4">
-          <h3 className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
-            Shop By Category
-          </h3>
-          <div className="flex justify-between bg-gray-100 shadow-lg w-9/12 mt-7 mx-auto categories">
-            <div className="py-10 px-5 text-center basis-2/3 cursor-pointer capitalize">
-              electronics
-            </div>
-            <div className="py-10 px-5 text-center basis-2/3 cursor-pointer capitalize">jewelery</div>
-            <div className="py-10 px-5 text-center basis-2/3 cursor-pointer capitalize">men&apos;s clothing</div>
-            <div className="py-10 px-5 text-center basis-2/3 cursor-pointer capitalize">women&apos;s clothing</div>
-          </div>
-        </div> */}
-        <div className="pb-0.5 my-28">
+        <div className="pb-0.5 my-10">
           <div className="relative px-10 py-8" style={{ backgroundRepeat: "no-repeat",  backgroundImage: "url(https://preview.colorlib.com/theme/divisima/img/banner-bg.jpg.webp)", backgroundSize: "cover",
     backgroundPosition: "top center" }}>
             <div className="absolute right-20 bottom-30 font-bold bg-stone-400 uppercase py-2 px-5 rounded-full">New</div>
@@ -68,7 +55,7 @@ export default function Home() {
             <a href="#" class="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
           </div>
         </div>
-        <div class="my-3">
+        <div className="my-3">
             <h3 className="text-lg text-left md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">
                 Shop By Category
             </h3>
