@@ -80,7 +80,7 @@ export default function Home() {
     backgroundPosition: "top center" }}>
             <div className="absolute right-20 bottom-30 font-bold bg-stone-400 uppercase py-2 px-5 rounded-full">New</div>
             <span className="uppercase mb-4 text-lg block tracking-wider font-semibold">New Arrivals</span>
-            <h2 className="uppercase font-bold mb-5 text-stone-700 text-6xl">STRIPED SHIRTS</h2>
+            <h2 className="uppercase font-bold mb-5 text-stone-700 text-3xl xl:text-6xl">WOMENS CLOTHES</h2>
             <Button href={''} content={'shop now'} />
           </div>
         </div>
