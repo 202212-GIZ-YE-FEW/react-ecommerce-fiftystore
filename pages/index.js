@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { CpuChipIcon } from '@heroicons/react/24/outline'
 import { Inter } from 'next/font/google'
 
 // import Swiper core and required modules
@@ -49,10 +50,13 @@ export default function Home() {
           <h3 className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
             Shop By Category
           </h3>
-          <div className="flex justify-between shadow-lg w-9/12 mt-7 mx-auto">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+          <div className="flex justify-between bg-gray-100 shadow-lg w-9/12 mt-7 mx-auto categories">
+            <div className="py-10 px-5 text-center capitalize">
+              electronics
+            </div>
+            <div className="py-10 px-5 text-center capitalize">jewelery</div>
+            <div className="py-10 px-5 text-center capitalize">men&apos;s clothing</div>
+            <div className="py-10 px-5 text-center capitalize">women&apos;s clothing</div>
           </div>
         </div>
       </main>

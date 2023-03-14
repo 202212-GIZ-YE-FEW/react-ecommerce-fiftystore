@@ -56,6 +56,14 @@ img, video {
     width: clamp(200px, 90vw, 100rem) !important;
 }
 
+.categories>* {
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+.categories>*:not(:last-child) {
+    @apply border-gray-200 border-r-2
+}
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
