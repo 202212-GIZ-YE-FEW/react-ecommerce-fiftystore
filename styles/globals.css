@@ -10,7 +10,7 @@
 }
 
 img, video {
-    min-width: 0;
+    /* min-width: 0; */
 }
 
 /** HOME **/

@@ -31,7 +31,6 @@ export default function Home() {
           slidesPerView={1}
           initialSlide={2}
           loopedSlides={1}
-          // loop="true"
           autoplay={{
             delay: 2000,
           }}
@@ -46,41 +45,41 @@ export default function Home() {
         </Swiper>
       </div>
       <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
+        <div className="my-">
+            <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
+                Shop By Category
+            </h3>
+            <div className="flex flex-col justify-center items-center space-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
+                <div className="relative group flex justify-center items-center h-full w-full">
+                  <img className="object-center object-cover h-full w-full" src="https://media1.popsugar-assets.com/files/thumbor/p3aGcIADLrSVbcM5uPa1He-Muv0/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2023/01/11/909/n/1922564/6345bb6b63bf20e195e452.64247813_/i/best-cheap-amazon-clothes-women.png" alt="girl-image" />
+                  <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Women's</a>
+                </div>
+                <div className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
+                  <div className="relative group flex justify-center items-center h-full w-full">
+                    <img className="object-center object-cover h-full w-full" src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg" alt="shoe-image" />
+                    <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Electronics</a>
+                  </div>
+                  <div className="relative group flex justify-center items-center h-full w-full">
+                    <img className="object-center object-cover h-full w-full" src="https://cdn.jewelryimages.net/static/domains/contijewelers/images/store-pics/w1900_q65.jpeg" alt="watch-image" />
+                    <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">jewelry</a>
+                  </div>
+                </div>
+                <div className="relative group justify-center items-center h-full w-full hidden lg:flex">
+                  <img className="object-center object-cover h-full w-full" src="https://images.urbndata.com/is/image/UrbanOutfitters/79871877_020_b?$medium$&qlt=80&fit=constrain" alt="girl-image" />
+                  <a href="#" className="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Men's</a>
+                </div>
+              </div>
+            </div>
+        </div>
         <div className="pb-0.5 my-10">
           <div className="relative px-10 py-8" style={{ backgroundRepeat: "no-repeat",  backgroundImage: "url(https://preview.colorlib.com/theme/divisima/img/banner-bg.jpg.webp)", backgroundSize: "cover",
     backgroundPosition: "top center" }}>
             <div className="absolute right-20 bottom-30 font-bold bg-stone-400 uppercase py-2 px-5 rounded-full">New</div>
             <span className="uppercase mb-4 text-lg block tracking-wider font-semibold">New Arrivals</span>
-            <h2 class="uppercase font-bold mb-5 text-stone-700 text-6xl">STRIPED SHIRTS</h2>
-            <a href="#" class="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
+            <h2 className="uppercase font-bold mb-5 text-stone-700 text-6xl">STRIPED SHIRTS</h2>
+            <a href="#" className="inline-block font-semibold px-7 py-3 rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">SHOP NOW</a>
           </div>
-        </div>
-        <div className="my-3">
-            <h3 className="text-lg text-left md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold">
-                Shop By Category
-            </h3>
-            <div class="flex flex-col justify-center items-center space-y-10">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
-                <div class="relative group flex justify-center items-center h-full w-full">
-                  <img class="object-center object-cover h-full w-full" src="https://media1.popsugar-assets.com/files/thumbor/p3aGcIADLrSVbcM5uPa1He-Muv0/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2023/01/11/909/n/1922564/6345bb6b63bf20e195e452.64247813_/i/best-cheap-amazon-clothes-women.png" alt="girl-image" />
-                  <a href="#" class="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Women's</a>
-                </div>
-                <div class="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
-                  <div class="relative group flex justify-center items-center h-full w-full">
-                    <img class="object-center object-cover h-full w-full" src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg" alt="shoe-image" />
-                    <a href="#" class="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Electronics</a>
-                  </div>
-                  <div class="relative group flex justify-center items-center h-full w-full">
-                    <img class="object-center object-cover h-full w-full" src="https://cdn.jewelryimages.net/static/domains/contijewelers/images/store-pics/w1900_q65.jpeg" alt="watch-image" />
-                    <a href="#" class="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">jewelry</a>
-                  </div>
-                </div>
-                <div class="relative group justify-center items-center h-full w-full hidden lg:flex">
-                  <img class="object-center object-cover h-full w-full" src="https://images.urbndata.com/is/image/UrbanOutfitters/79871877_020_b?$medium$&qlt=80&fit=constrain" alt="girl-image" />
-                  <a href="#" class="inline-block font-semibold px-7 py-3 z-10 absolute rounded-full uppercase bg-stone-900 text-white hover:bg-red-700">Men's</a>
-                </div>
-              </div>
-            </div>
         </div>
       </main>
     </>
