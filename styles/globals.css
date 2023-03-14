@@ -9,6 +9,54 @@
     scrollbar-width: thin;
 }
 
+img, video {
+    min-width: 0;
+    /* width: 100%;
+    object-fit: cover; */
+    /* aspect-ratio: 2 /1; */
+}
+
+/* Swiper Slide   */
+.swiper-slide {
+    /* flex-shrink: 1 !important; */
+}
+
+.swiper-wrapper {
+    --left: clamp(1%, 4.5%, 50%) !important;
+    position: relative;
+    left: var(--left);
+}
+
+.swiper {
+    display: flex;
+}
+
+.swiper-slide {
+    /* flex-shrink: 1; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.swiper-pagination {
+    bottom: 100px !important;
+}
+
+.swiper-pagination {
+    bottom: 100px !important;
+}
+
+.swiper-pagination-bullet-active {
+    transition: width .7s ease-in-out;
+    width: 60px !important;
+    border-radius: 5px !important;
+}
+
+.swiper-slide-active {
+    width: clamp(200px, 90vw, 100rem) !important;
+}
+
+
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 10px;

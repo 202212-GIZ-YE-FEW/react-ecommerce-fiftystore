@@ -1,11 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+
+// import Swiper core and required modules
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  SwiperCore.use([Autoplay]);
   return (
     <>
       <Head>
@@ -14,7 +22,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <div>
+        <Swiper  className="grid grid-cols-4 gap-4"
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={1}
+          initialSlide={2}
+          loopedSlides={1}
+          // loop="true"
+          autoplay={{
+            delay: 2000,
+          }}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <SwiperSlide><img src="https://preview.colorlib.com/theme/capitalshop/assets/img/hero/h1_hero2.jpg.webp" alt /></SwiperSlide>
+          <SwiperSlide><img src="https://chawkbazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fhero%2Fbanner-1.jpg&w=1920&q=100" alt /></SwiperSlide>
+          <SwiperSlide><img src="https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp" alt /></SwiperSlide>
+          <SwiperSlide><img src="https://preview.colorlib.com/theme/eiser/img/banner/banner-bg.jpg.webp" alt /></SwiperSlide>
+        </Swiper>
+      </div>
+      <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
+        <div className="pb-0.5 mb-4">
+          <h3 className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading">
+            Shop By Category
+          </h3>
+          <div className="flex justify-between shadow-lg w-9/12 mt-7 mx-auto">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
       </main>
     </>
   )
