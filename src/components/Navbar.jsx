@@ -13,7 +13,6 @@ const navigation = {
 
 export default function Example() {
   const [open, setOpen] = useState(false);
-  const [ searchOpen, setSearchOpen ] = useState(false);
 
   return (
     <div className="bg-white">
@@ -45,6 +44,7 @@ export default function Example() {
               <div className="ml-auto flex">
                 {/* Search */}
                 <Search />
+
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <Link href="/cart" className="group -m-2 flex items-center p-2 relative">

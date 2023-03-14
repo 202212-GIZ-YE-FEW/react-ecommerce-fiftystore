@@ -14,6 +14,7 @@ import 'swiper/css/scrollbar';
 // Import Components
 import { Button } from "../src/components/Button"
 import { Product } from "../src/components/Product"
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
