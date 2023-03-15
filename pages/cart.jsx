@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
-
+  const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
   useEffect(() => {
     const storedCartItems = localStorage.getItem('cartItems');
@@ -37,6 +37,12 @@ function CartPage() {
       }
       return item;
     });
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
+
+  const removeFromCart = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCartItems);
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
   };
@@ -78,11 +84,12 @@ function CartPage() {
               </div>
               <p className="text-lg font-bold text-gray-900 pt-2">{item.title}</p>
               <p className="text-xs leading-3 text-gray-600 py-4">{item.description}</p>
-              <p className="w-96 text-xs leading-3 font-bold  text-gray-800">{item.price} USD</p>
+              <p className="w-96 text-xs leading-3 font-bold  text-gray-800">{item.price * item.quantity} USD</p>
               <div className="flex items-center justify-between pt-5 pr-6">
                 <div className="flex itemms-center">
                  
                   <button
+                     onClick={() => removeFromCart(item.id)}
                     className="bg-red-500 text-white px-4 py-1 ml-2 rounded-md hover:bg-red-700 focus:outline-none"
                   >
                     Remove
@@ -101,21 +108,21 @@ function CartPage() {
             <p className="text-4xl font-black leading-9 text-gray-800">Summary</p>
             <div className="flex items-center justify-between pt-16">
               <p className="text-base leading-none text-gray-800">Subtotal</p>
-              <p className="text-base leading-none text-gray-800">$9,000</p>
+              <p className="text-base leading-none text-gray-800">${subtotal.toFixed(2)}</p>
             </div>
             <div className="flex items-center justify-between pt-5">
               <p className="text-base leading-none text-gray-800">Shipping</p>
-              <p className="text-base leading-none text-gray-800">$30</p>
+              <p className="text-base leading-none text-gray-800">$0</p>
             </div>
             <div className="flex items-center justify-between pt-5">
               <p className="text-base leading-none text-gray-800">Tax</p>
-              <p className="text-base leading-none text-gray-800">$35</p>
+              <p className="text-base leading-none text-gray-800">$0</p>
             </div>
           </div>
           <div>
             <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
               <p className="text-2xl leading-normal text-gray-800">Total</p>
-              <p className="text-2xl font-bold leading-normal text-right text-gray-800">$10,240</p>
+              <p className="text-2xl font-bold leading-normal text-right text-gray-800">${subtotal.toFixed(2)}</p>
             </div>
             <button className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
               Checkout
