@@ -92,12 +92,15 @@ export default function Home({ products, categories}) {
                 Most Rating Products
             </h3>
           <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+         
+            {products.map((product => <Product 
+                        key={product.id} 
+                        id={product.id}
+                        title={product.title} 
+                        description={product.description} 
+                        image={product.image}
+                        price={product.price}
+                        rate={product.rating.rate} />))}
           </div>
           <Button href="#" content={'view more'} additional_style={'block mt-5 mx-auto'} />
         </div>
