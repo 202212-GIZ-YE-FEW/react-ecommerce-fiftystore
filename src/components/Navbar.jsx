@@ -11,7 +11,7 @@ const navigation = {
   ],
 }
 
-export default function Example() {
+export default function Navbar({ projects }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -43,7 +43,7 @@ export default function Example() {
 
               <div className="ml-auto flex">
                 {/* Search */}
-                <Search />
+                <Search data={projects} />
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">

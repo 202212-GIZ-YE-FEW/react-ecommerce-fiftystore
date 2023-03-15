@@ -11,13 +11,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import { getAllProducts, getAllCategories } from '../utils/API';
+
 // Import Components
 import { Button } from "../src/components/Button"
 import { Product } from "../src/components/Product"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ products, categories}) {
   SwiperCore.use([Autoplay]);
   return (
     <>
@@ -28,7 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Swiper  className="grid grid-cols-4 gap-4"
+        {/* <Swiper  className="grid grid-cols-4 gap-4"
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
@@ -46,7 +48,7 @@ export default function Home() {
           <SwiperSlide><img src="https://preview.colorlib.com/theme/locksmith/img/hero/hero-2.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp" alt /></SwiperSlide>
           <SwiperSlide><img src="https://preview.colorlib.com/theme/eiser/img/banner/banner-bg.jpg.webp" alt /></SwiperSlide>
-        </Swiper>
+        </Swiper> */}
       </div>
       <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
         <div className="">
@@ -103,3 +105,14 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async () => {
+  const products = await getAllProducts();
+  const categories = await getAllCategories();
+  return {
+    props: {
+      products,
+      categories,
+    },
+  };
+};
