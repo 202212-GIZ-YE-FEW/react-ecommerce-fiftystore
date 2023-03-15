@@ -13,15 +13,20 @@ function CartPage() {
   }, []);
   const increaseQuantity = (id) => {
     const itemIndex = cartItems.findIndex((item) => item.id === id);
-
-    
+    if (itemIndex === -1) {
+      // Item not found in cart, add it with quantity 1
       const newItem = { id, quantity: 1 };
       const updatedCartItems = [...cartItems, newItem];
       setCartItems(updatedCartItems);
       localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-
+    } else {
+      // Item found in cart, update its quantity
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[itemIndex].quantity++;
+      setCartItems(updatedCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    }
   };
-
   return (
 
     <div className="flex md:flex-row flex-col justify-end " id="cart">
