@@ -11,6 +11,16 @@ function CartPage() {
       setCartItems(JSON.parse(storedCartItems));
     }
   }, []);
+  const increaseQuantity = (id) => {
+    const itemIndex = cartItems.findIndex((item) => item.id === id);
+
+    
+      const newItem = { id, quantity: 1 };
+      const updatedCartItems = [...cartItems, newItem];
+      setCartItems(updatedCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+
+  };
 
   return (
 
@@ -39,9 +49,9 @@ function CartPage() {
                 >
                   -
                 </button>
-                <span className="px-2">1</span>
+                <span className="px-2">{item.quantity}</span>
                 <button
-
+                  onClick={() => increaseQuantity(item.id)}
                   className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
                 >
                   +
@@ -52,15 +62,9 @@ function CartPage() {
               <p className="w-96 text-xs leading-3 font-bold  text-gray-800">{item.price} USD</p>
               <div className="flex items-center justify-between pt-5 pr-6">
                 <div className="flex itemms-center">
-                  <button
-                    className=" text-gray-900  px-4 py-1 ml-2 "
-
-                  >
-                    {item.quantity}
-                  </button>
+                 
                   <button
                     className="bg-red-500 text-white px-4 py-1 ml-2 rounded-md hover:bg-red-700 focus:outline-none"
-
                   >
                     Remove
                   </button>
