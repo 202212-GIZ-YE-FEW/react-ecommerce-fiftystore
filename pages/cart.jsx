@@ -31,15 +31,23 @@ function CartPage() {
                     </div>
                     <div className="md:pl-3 md:w-3/4">
                         <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4"></p>
-                        <div className="flex items-center justify-between w-full pt-1">
+                        <div className="flex items-center justify-end w-full pt-1">
                             <p className="text-base font-black leading-none text-gray-800"></p>
-                            <select className="py-2 px-1 border border-gray-200 mr-6 focus:outline-none">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                            </select>
+                            <button
+       
+                  className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
+                >
+                  -
+                </button>
+                <span className="px-2">1</span>
+                <button
+              
+                  className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
+                >
+                  +
+                </button>
                         </div>
-                        <p className="text-xs leading-3 text-gray-600 pt-2">{item.title}</p>
+                        <p className="text-lg font-bold text-gray-900 pt-2">{item.title}</p>
                         <p className="text-xs leading-3 text-gray-600 py-4">{item.description}</p>
                         <p className="w-96 text-xs leading-3 text-gray-600">{item.price} USD</p>
                         <div className="flex items-center justify-between pt-5 pr-6">
