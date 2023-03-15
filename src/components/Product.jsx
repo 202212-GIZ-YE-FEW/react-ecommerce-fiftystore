@@ -5,11 +5,11 @@ export const Product = (props) => {
     return (
         <>
             <div className="w-full mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <Link href={`/${id}`}>
+                <Link href={`/products/${id}`}>
                     <img className="p-8 rounded-t-lg max-h-64 max-w-64 w-auto mx-auto" src={image}  alt="product image" />
                 </Link>
                 <div className="px-5 pb-5">
-                    <a href={`/${id}`}>
+                    <a href={`/products/${id}`}>
                         <h5 className="text-xl font-semibold tracking-tight text-gray-900">{title}</h5>
                     </a>
                     <div className="flex justify-center items-center mt-2.5 mb-5">

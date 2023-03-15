@@ -1,7 +1,7 @@
 import { React } from "react";
-import { Button } from "../src/components/Button";
-import { getAllProducts } from '../utils/API';
-import "../styles/SingleProduct.css"
+import { Button } from "../../src/components/Button";
+import { getAllProducts } from '../../utils/API';
+// import "@/styles/SingleProduct.css"
 function SingleProduct({ product }) {
     return (
         <div className="small-container single-product">
