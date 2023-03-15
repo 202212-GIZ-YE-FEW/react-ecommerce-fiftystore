@@ -58,22 +58,22 @@ export default function Home({ products, categories}) {
             <div className="flex flex-col justify-center items-center space-y-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
                 <div className="relative group flex justify-center items-center h-full w-full">
-                  <img className="object-center object-cover h-full w-full" src="https://media1.popsugar-assets.com/files/thumbor/p3aGcIADLrSVbcM5uPa1He-Muv0/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2023/01/11/909/n/1922564/6345bb6b63bf20e195e452.64247813_/i/best-cheap-amazon-clothes-women.png" alt="girl-image" />
-                  <Button href={''} content="women's" additional_style={'z-10 absolute'} />
+                  <img className="object-center object-cover h-full w-full" src={`${categories[3]}.webp`} alt="girl-image" />
+                  <Button href={''} content={`${categories[3]}`} additional_style={'z-10 absolute'} />
                 </div>
                 <div className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
                   <div className="relative group flex justify-center items-center h-full w-full">
-                    <img className="object-center object-cover h-full w-full" src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg" alt="shoe-image" />
-                    <Button href={''} content="electronic" additional_style={'z-10 absolute'} />
+                    <img className="object-center object-cover h-full w-full" src={`${categories[0]}.webp`} alt="shoe-image" />
+                    <Button href={''} content={`${categories[0]}`} additional_style={'z-10 absolute'} />
                   </div>
                   <div className="relative group flex justify-center items-center h-full w-full">
-                    <img className="object-center object-cover h-full w-full" src="https://cdn.jewelryimages.net/static/domains/contijewelers/images/store-pics/w1900_q65.jpeg" alt="watch-image" />
-                    <Button href={''} content="man's" additional_style={'z-10 absolute'} />
+                    <img className="object-center object-cover h-full w-full" src={`${categories[1]}.webp`} alt="watch-image" />
+                    <Button href={''} content={`${categories[1]}`} additional_style={'z-10 absolute'} />
                   </div>
                 </div>
                 <div className="relative group justify-center items-center h-full w-full hidden lg:flex">
-                  <img className="object-center object-cover h-full w-full" src="https://images.urbndata.com/is/image/UrbanOutfitters/79871877_020_b?$medium$&qlt=80&fit=constrain" alt="girl-image" />
-                 <Button href={''} content="man's" additional_style={'z-10 absolute'} />
+                  <img className="object-center object-cover h-full w-full" src={`${categories[2]}.webp`} alt="girl-image" />
+                 <Button href={''} content={`${categories[2]}`} additional_style={'z-10 absolute'} />
                 </div>
               </div>
             </div>
