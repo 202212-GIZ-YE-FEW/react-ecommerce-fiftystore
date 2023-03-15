@@ -1,11 +1,23 @@
-import { React } from "react";
-import { Button } from "../../src/components/Button";
-import { getAllProducts } from '../../utils/API';
 import { StarIcon, Bars3CenterLeftIcon } from '@heroicons/react/24/outline';
+import { Button } from "./Button";
 
-function SingleProduct({ product }) {
+
+function ProductOverview() {
+    const product = {
+        "id": 1,
+        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        }
+    };
+
     return (
-        <div className="flex items-center justify-center m-10">
+        <div className="flex items-center justify-center">
             <img className="object-fill h-100 w-96" src={product.image} alt="" />
             <div className="flex flex-col justify-between p-4 leading-normal">
                 <h5 className="mb-2 text-3xl font-bold tracking-tight">{product.title}</h5>
@@ -28,20 +40,4 @@ function SingleProduct({ product }) {
     );
 }
 
-export async function getStaticPaths() {
-    const products = await getAllProducts();
-
-    // get ids
-    const paths = products.map(product => ({
-        params: { id: String(product.id) }
-    }));
-    console.log(paths);
-    return { paths, fallback: false }
-}
-
-export async function getStaticProps({ params }) {
-    const product = await getAllProducts(`products/${params.id}`);
-    return { props: { product } }
-}
-
-export default SingleProduct;
+export default ProductOverview;
