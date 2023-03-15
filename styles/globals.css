@@ -2,23 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    margin: 0;
-    padding: 0;
+html{
+    height: 100%;
+}
+body{
+    background: azure;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track{
+    background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #505050;
+    border-radius: 1000px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #505050;
+ 
+}
+.thump,
+.thump::-webkit-slider-thumb{
+    -webkit-appearance: none ;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.thump {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
     outline: none;
-    scrollbar-width: thin;
 }
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 10px;
+/*for chrom*/
+.thump::-webkit-slider-thumb{
+    background-color: #f1f1f7;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
 }
-
-*::-webkit-scrollbar-track {
-    border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-    border-radius: 14px;
-    border: 10px solid gray;
+/*for firefox*/
+.thump::-moz-slider-thumb{
+    background-color: #f1f1f7;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
 }
