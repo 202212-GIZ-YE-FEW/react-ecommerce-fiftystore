@@ -49,7 +49,7 @@ function CartPage() {
                         </div>
                         <p className="text-lg font-bold text-gray-900 pt-2">{item.title}</p>
                         <p className="text-xs leading-3 text-gray-600 py-4">{item.description}</p>
-                        <p className="w-96 text-xs leading-3 text-gray-600">{item.price} USD</p>
+                        <p className="w-96 text-xs leading-3 font-bold  text-gray-800">{item.price} USD</p>
                         <div className="flex items-center justify-between pt-5 pr-6">
                             <div className="flex itemms-center">
                                 <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">{item.quantity}</p>
