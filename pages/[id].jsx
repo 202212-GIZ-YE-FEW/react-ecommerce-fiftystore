@@ -1,5 +1,6 @@
 import { React } from "react";
-import { Button } from "./Button";
+import { Button } from "../src/components/Button";
+import { getAllProducts } from '../utils/API';
 
 function SingleProduct() {
     const product = {
@@ -50,6 +51,22 @@ function SingleProduct() {
             </div>
         </div>
     );
+}
+
+export async function getStaticPaths(){
+    const products = await getAllProducts();
+
+    // get ids
+    const paths = products.map(product => ({
+        params: {id: String(product.id)}
+    }));
+    console.log(paths);
+    return { paths, fallback: false}
+}
+
+export async function getStaticProps({ params }){
+    const product = await getAllProducts(`products/${params.id}`);
+    return { props: { product }}
 }
 
 export default SingleProduct;

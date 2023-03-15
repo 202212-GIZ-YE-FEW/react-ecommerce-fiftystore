@@ -1,15 +1,15 @@
 import { Button } from "./Button"
-
+import Link from "next/link"
 export const Product = (props) => {
-    const { title, description, image, price, rate } = props;
+    const { id, title, description, image, price, rate } = props;
     return (
         <>
             <div className="w-full mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-                <a href="#">
+                <Link href={`/${id}`}>
                     <img className="p-8 rounded-t-lg max-h-64 max-w-64 w-auto mx-auto" src={image}  alt="product image" />
-                </a>
+                </Link>
                 <div className="px-5 pb-5">
-                    <a href="#">
+                    <a href={`/${id}`}>
                         <h5 className="text-xl font-semibold tracking-tight text-gray-900">{title}</h5>
                     </a>
                     <div className="flex justify-center items-center mt-2.5 mb-5">

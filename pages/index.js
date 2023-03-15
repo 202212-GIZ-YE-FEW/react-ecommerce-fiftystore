@@ -95,6 +95,7 @@ export default function Home({ products, categories}) {
          
             {products.map((product => <Product 
                         key={product.id} 
+                        id={product.id}
                         title={product.title} 
                         description={product.description} 
                         image={product.image}
