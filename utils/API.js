@@ -11,6 +11,9 @@ export async function getAllCategories() {
     const data = res.json();
     return data;
 }
+export async function getAllProductsByCategory(name){
+    return await getAllProducts(`products/category/${name}`);
+}
 export async function getProductsByTitle(from, title, setSearchResults) {
     const products  = await getAllProducts();
     await setSearchResults(products.filter(product => product.title.toLowerCase().includes(title.toLowerCase())));
