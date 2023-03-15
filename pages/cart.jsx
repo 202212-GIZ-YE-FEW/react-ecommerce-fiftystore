@@ -27,6 +27,19 @@ function CartPage() {
       localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
     }
   };
+  const decreaseQuantity = (id) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === id && item.quantity > 1) {
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+        };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  };
   return (
 
     <div className="flex md:flex-row flex-col justify-end " id="cart">
@@ -49,6 +62,7 @@ function CartPage() {
               <div className="flex items-center justify-end w-full pt-1">
                 <p className="text-base font-black leading-none text-gray-800"></p>
                 <button
+                   onClick={() => decreaseQuantity(item.id)}
 
                   className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
                 >
