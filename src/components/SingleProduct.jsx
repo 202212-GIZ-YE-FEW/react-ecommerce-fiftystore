@@ -1,4 +1,5 @@
 import { React } from "react";
+import { Button } from "./Button";
 
 function SingleProduct() {
     const product = {
@@ -34,8 +35,7 @@ function SingleProduct() {
                     </div>
 
                     <input type="number" defaultValue={1} />
-                    <a href="" className="btn">Add To Cart</a>
-                    {/* <Button className="btn" content={"Add To Cart"} /> */}
+                    <Button className="btn" content={"Add To Cart"} />
 
 
                     <div className="icons">
