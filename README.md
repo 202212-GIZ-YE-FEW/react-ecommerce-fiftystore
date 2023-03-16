@@ -8,8 +8,11 @@ Ecommerce-fiftystore.
 <img width="1512" alt="img1" src="https://user-images.githubusercontent.com/49036484/225686560-ffb89d35-ab3d-4f5f-94a1-4281aeb0d702.png">
 
 <img width="1512" alt="img5" src="https://user-images.githubusercontent.com/49036484/225688704-65679a55-586f-4e01-b767-caf75dc8bcc3.png">
-<img width="1512" alt="img3" src="https://user-images.githubusercontent.com/49036484/225688737-5087b8e4-0419-48f6-9f9c-baf6fb642c3f.png">
 
+
+<img width="1512" alt="img6" src="https://user-images.githubusercontent.com/49036484/225689503-88696c0f-624f-4659-ab56-3a07a794fc17.png">
+
+<img width="1512" alt="img10" src="https://user-images.githubusercontent.com/49036484/225689718-45ecde42-e13f-49f3-bedd-0d8393c64572.png">
 
 
 * E-commerce is a business model that involves transactions taking place on the internet. It typically involves buying and selling products and services online, and often includes features like product listings, shopping carts, and payment gateways. 
