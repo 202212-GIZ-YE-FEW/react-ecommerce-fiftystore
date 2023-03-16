@@ -3,14 +3,21 @@ Ecommerce-fiftystore.
 
 ## Project Description 
 
+##Hero Section 
 <img width="1512" alt="img3" src="https://user-images.githubusercontent.com/49036484/225685428-135fd4ae-533c-4940-ad83-d9191c719212.png">
+##Cart Page
 
 <img width="1512" alt="img1" src="https://user-images.githubusercontent.com/49036484/225686560-ffb89d35-ab3d-4f5f-94a1-4281aeb0d702.png">
 
+## Single Product 
+
 <img width="1512" alt="img5" src="https://user-images.githubusercontent.com/49036484/225688704-65679a55-586f-4e01-b767-caf75dc8bcc3.png">
 
+##Filter 
 
 <img width="1512" alt="img6" src="https://user-images.githubusercontent.com/49036484/225689503-88696c0f-624f-4659-ab56-3a07a794fc17.png">
+
+##All Product 
 
 <img width="1512" alt="img10" src="https://user-images.githubusercontent.com/49036484/225689718-45ecde42-e13f-49f3-bedd-0d8393c64572.png">
 
