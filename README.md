@@ -1,11 +1,11 @@
 
-Ecommerce-fiftystore.
+## Ecommerce-fiftystore.
 
 ## Project Description 
 
 ## Hero Section 
 <img width="1512" alt="img3" src="https://user-images.githubusercontent.com/49036484/225685428-135fd4ae-533c-4940-ad83-d9191c719212.png">
-##Cart Page
+## Cart Page
 
 <img width="1512" alt="img1" src="https://user-images.githubusercontent.com/49036484/225686560-ffb89d35-ab3d-4f5f-94a1-4281aeb0d702.png">
 
@@ -31,13 +31,13 @@ Ecommerce-fiftystore.
 
 
 
- ### Tools used
+ ## Tools used
  1. Next js 
  2. tailwind (Css Framework)
  3. Hero Icons (React Library)
  
 
- ####   Names.
+ ##   Names.
 
  1. Jehad Almaliki
  2. Abrar Alkhorasani
