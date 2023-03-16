@@ -57,25 +57,23 @@ export default function Home({ products, categories }) {
           </h3>
           <div className="flex flex-col justify-center items-center space-y-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
+              <div className="relative group flex justify-center items-center h-full w-full">
+                <img className="object-center object-cover h-full w-full" src={`${categories[3]}.webp`} alt="girl-image" />
+                <Button href={`/products/category/${categories[3]}`} content={`${categories[3]}`} additional_style={'z-10 absolute'} />
+              </div>
               <div className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
                 <div className="relative group flex justify-center items-center h-full w-full">
-                  <img className="object-center object-cover h-full w-full" src={`${categories[3]}.webp`} alt="girl-image" />
-                  <Button href={`/products/category/${categories[3]}`} content={`${categories[3]}`} additional_style={'z-10 absolute'} />
+                  <img className="object-center object-cover h-full w-full" src={`${categories[0]}.webp`} alt="shoe-image" />
+                  <Button href={`/products/category/${categories[0]}`} content={`${categories[0]}`} additional_style={'z-10 absolute'} />
                 </div>
-                <div className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
-                  <div className="relative group flex justify-center items-center h-full w-full">
-                    <img className="object-center object-cover h-full w-full" src={`${categories[0]}.webp`} alt="shoe-image" />
-                    <Button href={`/products/category/${categories[0]}`} content={`${categories[0]}`} additional_style={'z-10 absolute'} />
-                  </div>
-                  <div className="relative group flex justify-center items-center h-full w-full">
-                    <img className="object-center object-cover h-full w-full" src={`${categories[1]}.webp`} alt="watch-image" />
-                    <Button href={`/products/category/${categories[1]}`} content={`${categories[1]}`} additional_style={'z-10 absolute'} />
-                  </div>
+                <div className="relative group flex justify-center items-center h-full w-full">
+                  <img className="object-center object-cover h-full w-full" src={`${categories[1]}.webp`} alt="watch-image" />
+                  <Button href={`/products/category/${categories[1]}`} content={`${categories[1]}`} additional_style={'z-10 absolute'} />
                 </div>
-                <div className="relative group justify-center items-center h-full w-full hidden lg:flex">
-                  <img className="object-center object-cover h-full w-full" src={`${categories[2]}.webp`} alt="girl-image" />
-                  <Button href={`/products/category/${categories[2]}`} content={`${categories[2]}`} additional_style={'z-10 absolute'} />
-                </div>
+              </div>
+              <div className="relative group justify-center items-center h-full w-full hidden lg:flex">
+                <img className="object-center object-cover h-full w-full" src={`${categories[2]}.webp`} alt="girl-image" />
+                <Button href={`/products/category/${categories[2]}`} content={`${categories[2]}`} additional_style={'z-10 absolute'} />
               </div>
             </div>
           </div>
