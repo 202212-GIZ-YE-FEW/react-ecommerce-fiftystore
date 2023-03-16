@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Popover } from '@headlessui/react'
 import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
@@ -13,6 +13,15 @@ const navigation = {
 
 export default function Navbar({ projects }) {
   const [open, setOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  
+  // Retrieve cart items from local storage on page load
+  useEffect(() => {
+    const items = localStorage.getItem('cartItems');
+    if (items) {
+      setCartItems(JSON.parse(items));
+    }
+  }, []);
 
   return (
     <div className="bg-white">
@@ -52,7 +61,7 @@ export default function Navbar({ projects }) {
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
                     />
-                    <span className="bg-red-600 text-white text-sm font-medium px-2 py-0.5 rounded-full group-hover:bg-red-800 dark:bg-red-900 dark:text-red-300 absolute bottom-5 left-5">0</span>
+                    <span className="bg-red-600 text-white text-sm font-medium px-2 py-0.5 rounded-full group-hover:bg-red-800 dark:bg-red-900 dark:text-red-300 absolute bottom-5 left-5">{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>
