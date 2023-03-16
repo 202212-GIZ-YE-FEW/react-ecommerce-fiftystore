@@ -11,6 +11,7 @@ function CartPage() {
       setCartItems(JSON.parse(storedCartItems));
     }
   }, []);
+  
   const increaseQuantity = (id) => {
     const itemIndex = cartItems.findIndex((item) => item.id === id);
     if (itemIndex === -1) {
@@ -27,6 +28,7 @@ function CartPage() {
       localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
     }
   };
+
   const decreaseQuantity = (id) => {
     const updatedCartItems = cartItems.map((item) => {
       if (item.id === id && item.quantity > 1) {
