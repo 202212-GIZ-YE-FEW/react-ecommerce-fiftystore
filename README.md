@@ -4,7 +4,9 @@
 ## Project Description 
 
 ## Hero Section 
+
 <img width="1512" alt="img3" src="https://user-images.githubusercontent.com/49036484/225685428-135fd4ae-533c-4940-ad83-d9191c719212.png">
+
 ## Cart Page
 
 <img width="1512" alt="img1" src="https://user-images.githubusercontent.com/49036484/225686560-ffb89d35-ab3d-4f5f-94a1-4281aeb0d702.png">
