@@ -60,7 +60,18 @@ function SingleProduct({ product }) {
         setCartItems(updatedCartItems);
         localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
       };
-     
+      function getProductQuantity(productId) {
+
+        const productInCart = cartItems.find(item => item.id === productId);
+        
+        // If the product is found in the cart, return its quantity
+        if (productInCart) {
+          return productInCart.quantity;
+        }
+        
+        // If the product is not found in the cart, return 0
+        return 0;
+      }
       
 
     return (
@@ -87,7 +98,7 @@ function SingleProduct({ product }) {
                   -
                 </button>
         
-                <span className="px-2 text-gray-700"> </span>
+                <span className="px-2 text-gray-700"> {getProductQuantity(product.id)}</span>
           
                 <button
                   onClick={() => increaseQuantity(product.id)}
@@ -95,7 +106,6 @@ function SingleProduct({ product }) {
                 >
                   +
                 </button>
-                
                     <Button className="btn" content={"Add To Cart"}  handleClickFun={() => addToCart(product)} />
                 </div>
             </div>
