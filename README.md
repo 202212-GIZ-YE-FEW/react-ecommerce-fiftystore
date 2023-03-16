@@ -7,6 +7,11 @@ Ecommerce-fiftystore.
 
 <img width="1512" alt="img1" src="https://user-images.githubusercontent.com/49036484/225686560-ffb89d35-ab3d-4f5f-94a1-4281aeb0d702.png">
 
+<img width="1512" alt="img5" src="https://user-images.githubusercontent.com/49036484/225688704-65679a55-586f-4e01-b767-caf75dc8bcc3.png">
+<img width="1512" alt="img3" src="https://user-images.githubusercontent.com/49036484/225688737-5087b8e4-0419-48f6-9f9c-baf6fb642c3f.png">
+
+
+
 * E-commerce is a business model that involves transactions taking place on the internet. It typically involves buying and selling products and services online, and often includes features like product listings, shopping carts, and payment gateways. 
 
  * This project provides an overview of how to build an e-commerce website using React and APIs provided by services like FakeStoreAPI. The project includes creating pages to display all products, individual products, and the user's cart. It also includes project management aspects, such as using Git workflow and issue tracking.
