@@ -41,12 +41,12 @@ export default function Navbar({ projects }) {
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
                   <span className="sr-only">FiftyStore</span>
-                  {/* <img
-                    className="h-8 w-auto"
+                  <img
+                    className="h-8 w-50"
                     src="/logo_fifty.png"
                     alt=""
-                  /> */}
-                  Logo
+                  />
+               
                 </Link>
               </div>
 
