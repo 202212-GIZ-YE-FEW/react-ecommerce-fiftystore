@@ -21,6 +21,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ products, categories}) {
   SwiperCore.use([Autoplay]);
+ 
   return (
     <>
       <Head>
@@ -102,7 +103,7 @@ export default function Home({ products, categories}) {
                         price={product.price}
                         rate={product.rating.rate} />))}
           </div>
-          <Button href="#" content={'view more'} additional_style={'block mt-5 mx-auto'} />
+          <Button content={'view more'} additional_style={'block mt-5 mx-auto'} />
         </div>
       </main>
     </>
