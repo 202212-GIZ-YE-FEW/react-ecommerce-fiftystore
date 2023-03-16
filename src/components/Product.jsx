@@ -1,7 +1,33 @@
+import React, { useState, useEffect } from 'react';
 import { Button } from "./Button"
 import Link from "next/link"
 export const Product = (props) => {
+
     const { id, title, description, image, price, rate } = props;
+    const [cartItems, setCartItems] = useState([]);
+  
+    // Retrieve cart items from local storage on page load
+    useEffect(() => {
+      const items = localStorage.getItem('cartItems');
+      if (items) {
+        setCartItems(JSON.parse(items));
+      }
+    }, []);
+    const addToCart = (item) => {
+        const itemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
+        let updatedCartItems = [];
+        if (itemInCart) {
+          updatedCartItems = cartItems.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+          );
+        } else {
+          updatedCartItems = [...cartItems, { ...item, quantity: 1 }];
+        }
+        setCartItems(updatedCartItems);
+        // Save cart items to local storage
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+      };
+
     return (
         <>
             <div className="w-full mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow">
@@ -22,7 +48,7 @@ export const Product = (props) => {
                     </div>
                     <div className="flex justify-between items-center">
                         <span className="text-3xl font-bold text-gray-900">${price}</span>
-                        <Button content={"Add To Cart"} />
+                        <Button content={"Add To Cart"}    handleClickFun={() => addToCart(props)}/>
                     </div>
                 </div>
             </div>
