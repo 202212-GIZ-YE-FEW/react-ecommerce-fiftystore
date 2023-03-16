@@ -88,7 +88,7 @@ export default function Home({ products, categories}) {
         </div>
         <div className="pb-0.5 my-3 mx-auto max-w-7xl sm:px-6 lg:px-8">         
             <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
-                Most Rating Products
+                Most Recent Products
             </h3>
           <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product => <Product 
@@ -108,7 +108,7 @@ export default function Home({ products, categories}) {
 }
 
 export const getStaticProps = async () => {
-  const products = await getAllProducts();
+  const products = await getAllProducts('products?limit=6');
   const categories = await getAllCategories();
   return {
     props: {
