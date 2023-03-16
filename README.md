@@ -8,7 +8,7 @@ Ecommerce-fiftystore.
 
  * This project provides an overview of how to build an e-commerce website using React and APIs provided by services like FakeStoreAPI. The project includes creating pages to display all products, individual products, and the user's cart. It also includes project management aspects, such as using Git workflow and issue tracking.
 
-![My Home logo](public/screen/img1.png)
+![My Home logo](../develop/public/screen/img1.png)
 
  ### Tools used
  1. Next js 
