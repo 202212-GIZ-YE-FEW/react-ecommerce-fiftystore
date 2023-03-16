@@ -13,13 +13,12 @@ export const Product = (props) => {
                     <Link href={`/products/${id}`} className="min-h-[1rem] max-h-4 py-10 max-w-64 w-auto mx-auto overflow-hidden">
                         <h5 className="text-xl font-semibold tracking-tight text-gray-900 m-0 p-0 overflow-hidden">{title.substring(0, 30)} {title.length >= 30 && '...'}</h5>
                     </Link>
-                    <div className="flex justify-center items-center mt-2.5 mb-5">
+                    <div className="flex justify-center items-center mt-2.5 mb-5 flex-row-reverse">
                         {[1, 2, 3, 4, 5].map((i)=> {
                             if(i < Math.round(rate))
-                                return <StarIcon className="w-5 h-5 text-stone-400"/>
+                                return <StarIcon key={i} className="w-5 h-5 text-stone-400"/>
                             else
-                                return <StarIcon className="w-5 h-5 text-yellow-500" fill="currentColor"/>
-                            
+                                return <StarIcon key={i} className="w-5 h-5 text-yellow-500" fill="currentColor"/>
                         })}
                     </div>
                     <div className="flex justify-between items-center">
