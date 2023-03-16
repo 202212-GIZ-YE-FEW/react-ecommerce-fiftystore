@@ -61,8 +61,8 @@ function CartPage() {
         {cartItems.map((item) => (
           <div key={item.id} className="md:flex items-center mt-14 py-8 border-t border-gray-200">
             <div className="w-1/4">
-            <Link href={`/products/${item.id}`}>
-              <img src={item.image} alt className={item.title} />
+              <Link href={`/products/${item.id}`}>
+                <img src={item.image} alt className={item.title} />
               </Link>
             </div>
             <div className="md:pl-3 md:w-3/4">
@@ -70,7 +70,7 @@ function CartPage() {
               <div className="flex items-center justify-end w-full pt-1">
                 <p className="text-base font-black leading-none text-gray-800"></p>
                 <button
-                   onClick={() => decreaseQuantity(item.id)}
+                  onClick={() => decreaseQuantity(item.id)}
 
                   className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
                 >
@@ -89,9 +89,9 @@ function CartPage() {
               <p className="w-96 text-xs leading-3 font-bold  text-gray-800">{item.price * item.quantity} USD</p>
               <div className="flex items-center justify-between pt-5 pr-6">
                 <div className="flex itemms-center">
-                 
+
                   <button
-                     onClick={() => removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.id)}
                     className="bg-red-500 text-white px-4 py-1 ml-2 rounded-md hover:bg-red-700 focus:outline-none"
                   >
                     Remove
