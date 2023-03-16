@@ -51,11 +51,8 @@ function CartPage() {
     <div className="flex md:flex-row flex-col justify-end " id="cart">
       <div className="lg:w-1/1 w-90 md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen" id="scroll">
         <div className="flex items-center text-gray-500 hover:text-gray-600 cursor-pointer" >
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <polyline points="15 6 9 12 15 18" />
-          </svg>
-          <p className="text-sm pl-2 leading-none">Back</p>
+        
+        
         </div>
         <p className="text-5xl font-black leading-10 text-gray-800 pt-3">Bag</p>
         {cartItems.map((item) => (
