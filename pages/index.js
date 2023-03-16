@@ -49,7 +49,7 @@ export default function Home({ products, categories}) {
           <SwiperSlide><img src="https://preview.colorlib.com/theme/eiser/img/banner/banner-bg.jpg.webp" alt /></SwiperSlide>
         </Swiper> */}
       </div>
-      <main className="mx-auto max-w-[1920px] px-4 md:px-8 mt-10 2xl:px-16">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:px-8 mt-10">
         <div className="">
             <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
                 Shop By Category
@@ -86,12 +86,11 @@ export default function Home({ products, categories}) {
             <Button href={''} content={'shop now'} />
           </div>
         </div>
-        <div className="pb-0.5 my-3">         
+        <div className="pb-0.5 my-3 mx-auto max-w-7xl sm:px-6 lg:px-8">         
             <h3 className="text-lg lg:text-2xl xl:leading-10 font-bold mb-4">
                 Most Rating Products
             </h3>
           <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-         
             {products.map((product => <Product 
                         key={product.id} 
                         id={product.id}
