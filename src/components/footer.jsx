@@ -2,10 +2,10 @@ import { React } from "react";
 
 function Footer() {
     return (
-        <footer className="bg-white">
+        <footer className="bg-gray-100 mt-10 ">
             <hr />
-            <div className="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-between">
-                <div className="sm:items-center">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 container md:p-6 p-4 md:flex md:items-center md:justify-between">
+                <div className="flex sm:items-center justify-center">
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                         <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" /></svg>
@@ -29,9 +29,9 @@ function Footer() {
                         </a>
                     </div>
                 </div>
-                <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                <ul className="flex flex-wrap items-center mt-3 text-sm text-stone-700 sm:mt-0">
                     <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">Men&apos;s Clothing</a>
+                        <a href="#" className="mr-4 hover:underline md:mr-6">Men&apos;s Clothing</a>
                     </li>
                     <li>
                         <a href="#" className="mr-4 hover:underline md:mr-6">Women&apos;s Clothing</a>
@@ -45,7 +45,7 @@ function Footer() {
                 </ul>
             </div>
             <div className="w-full mx-auto container md:p-6 p-4 flex items-center justify-center">
-                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 Fifty Store™. All Rights Reserved.
+                <span className="text-sm text-gray-600 sm:text-center">© 2023 Fifty Store™. All Rights Reserved.
                 </span>
             </div>
         </footer>
