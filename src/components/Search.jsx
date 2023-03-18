@@ -33,7 +33,7 @@ export const Search = ({ data }) => {
                                 placeholder="Search..." 
                                 value={searchState}
                                 onChange={(e) => {setSearchState(e.target.value)}} />
-                                <SearchResults searchResults={searchResults} />
+                                {searchResults.length > 0 && <SearchResults searchResults={searchResults} />}
                         </div>
                     </div>
 
