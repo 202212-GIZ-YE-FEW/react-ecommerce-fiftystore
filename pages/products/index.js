@@ -1,12 +1,11 @@
 
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { FunnelIcon } from '@heroicons/react/20/solid'
 import { getAllProducts, getAllCategories } from '../../utils/API';
 
 // Import Components
-import { Button } from "../../src/components/Button"
 import { Product } from "../../src/components/Product"
 
 
@@ -36,17 +35,6 @@ export default function Products({ products, categories }) {
             newCategoryItem.splice(currentIndex, 1);
         setCategoryFilter(newCategoryItem);
     };
-    const handleSortByChange = value => {
-        // const currentIndex = categoryFilter.indexOf(value);
-        // const newChecked = [...categoryFilter];
-        // if(currentIndex === -1)
-        //     newChecked.push(value);
-        // else
-        //     newChecked.splice(currentIndex, 1);
-        // setCategoryFilter(newChecked);
-    };
-
-
 
     return (
         <div className="bg-white">
