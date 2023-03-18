@@ -2,7 +2,7 @@ import Link from "next/link"
 export const SearchResults = ({ searchResults }) => {
     return (
         <>
-            <div className="flex justify-between items-center max-w-[1520px] w-3/4 absolute top-20 left-1/2 -translate-x-1/2 rounded-md bg-white py-3 px-4 z-10 shadow-lg">
+            <div className="flex justify-between items-center w-full w-3/4 absolute top-20 left-1/2 -translate-x-1/2 rounded-md bg-white py-3 px-4 z-10 shadow-lg">
                 <ul role="list" className="w-full divide-y divide-gray-200 dark:divide-gray-700">
                     {searchResults.map((res) => 
                         <li className="py-3 sm:py-4 hover:bg-gray-300" key={res.id}>
