@@ -14,7 +14,14 @@ export default function Products({ products, categories }) {
 const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 const [ productsState, setProductsState ] = useState(products);
 const [ categoryFilter , setCategoryFilter ] = useState([]);
+
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
 const sortOptions = [
+    
     { name: 'Best Rating', href: '#', current: false },
     { name: 'Newest', href: '#', current: false },
     { name: 'Price: Low to High', href: '#', current: false },
@@ -24,23 +31,41 @@ const sortOptions = [
     {
         id: 'category',
         name: 'Category',
+        type: "checkbox",
         options: categories.map(category => {
             return {name: category.trim(), value: category.replace(/\s+/g, '-').toLowerCase(), label: category, checked:false}
         }) 
     },
+    {
+        id: 'price',
+        name: 'Price',
+        type: "range",
+        options: [],
+    },
     ]
-    function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-    }
+
+
+    // Handles
     const handleCategoryChange = value => {
         const currentIndex = categoryFilter.indexOf(value);
-        const newChecked = [...categoryFilter];
+        const newCategoryItem = [...categoryFilter];
         if(currentIndex === -1)
-            newChecked.push(value);
+            newCategoryItem.push(value);
         else
-            newChecked.splice(currentIndex, 1);
-        setCategoryFilter(newChecked);
+            newCategoryItem.splice(currentIndex, 1);
+        setCategoryFilter(newCategoryItem);
     };
+    const handlePriceChange = value => {
+        // const currentIndex = categoryFilter.indexOf(value);
+        // const newChecked = [...categoryFilter];
+        // if(currentIndex === -1)
+        //     newChecked.push(value);
+        // else
+        //     newChecked.splice(currentIndex, 1);
+        // setCategoryFilter(newChecked);
+    };
+
+
 
     return (
         <div className="bg-white">
@@ -95,18 +120,16 @@ const sortOptions = [
                                         </div>
                                         </h3>
                                         <div className="space-y-6">
-                                            {section.options.map((option, optionIdx) => (
+                                            {section.options.map((option) => (
                                             <div key={option.value} className="flex items-center">
                                                 <input
-                                                id={`filter-mobile-${section.id}-${optionIdx}`}
                                                 name={`${section.id}[]`}
-                                                type="checkbox"
+                                                type={`${section.type}`}
                                                 checked={categoryFilter.indexOf(option.label) === -1? false:true}
                                                 onChange={() => handleCategoryChange(option.label)}
                                                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                                 />
                                                 <label
-                                                htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
                                                 className="ml-3 min-w-0 flex-1 text-gray-500"
                                                 >
                                                 {option.label}
@@ -197,10 +220,9 @@ const sortOptions = [
                                         </div>
                                         </h3>
                                         <div className="space-y-4">
-                                            {section.options.map((option, optionIdx) => (
+                                            {section.options.map((option) => (
                                             <div key={option.value} className="flex items-center">
                                                 <input
-                                                id={`filter-mobile-${section.id}-${optionIdx}`}
                                                 name={`${section.id}[]`}
                                                 type="checkbox"
                                                 checked={categoryFilter.indexOf(option.label) === -1? false:true}
@@ -208,7 +230,6 @@ const sortOptions = [
                                                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                                 />
                                                 <label
-                                                htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
                                                 className="ml-3 min-w-0 flex-1 text-gray-500"
                                                 >
                                                 {option.label}
@@ -225,7 +246,7 @@ const sortOptions = [
                             <div className="lg:col-span-3">
                                 <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                    {productsState.filter((item) => { //Use the filter to compare the value of the input (will take the value as props from navbar component), so that if it is empty, it displays all the data, and if any character changes, it displays the data that includes this character
-                                    if (categoryFilter === []) {
+                                    if (categoryFilter.length === 0) {
                                         return item;
                                     }
                                     else if (categoryFilter.includes(item.category)) {

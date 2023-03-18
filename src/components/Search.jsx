@@ -10,7 +10,7 @@ export const Search = ({ data }) => {
 
     useEffect(() => {
         searchState ?
-            getProductsByTitle(data, searchState, setSearchResults)
+            getProductsByTitle(searchState, setSearchResults)
              : setSearchResults([]);
     }, [searchState]);
 
