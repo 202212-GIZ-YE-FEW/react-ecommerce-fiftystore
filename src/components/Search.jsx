@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
 import { XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { Overlay } from "./Overlay"
+import { useSearchContext } from '../context/SearchContext';
 import { SearchResults } from './SearchResults';
-import { getProductsByTitle } from '../../utils/API';
-export const Search = ({ data }) => {
+export const Search = () => {
     const [ searchModal,  setSearchModal] = useState(false);
     const [ searchState, setSearchState ] = useState("");
-    const [ searchResults, setSearchResults ] = useState([]);
+
+    const { searchFn, searchResults } = useSearchContext();
 
     useEffect(() => {
-        searchState ?
-            getProductsByTitle(searchState, setSearchResults)
-             : setSearchResults([]);
+        searchFn(searchState);
     }, [searchState]);
 
     return (

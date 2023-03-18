@@ -1,8 +1,12 @@
 import { React } from "react";
-import { Button } from "../../../src/components/Button";
+import { useSearchContext } from '../../../src/context/SearchContext';
 import { getAllCategories, getAllProductsByCategory } from '../../../utils/API';
 import { Product } from "../../../src/components/Product"
 function CategoryProducts({ products, category }) {
+
+    const {setItemsToSearchFromFn} = useSearchContext();
+    setItemsToSearchFromFn(products)
+
     return (
         <>
             <div className="full-screen h-60 mb-10 relative" style={{ backgroundImage: `url(https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2022/12/d100042054958420958409285094.jpg)`, backgroundSize: 'cover' }}>

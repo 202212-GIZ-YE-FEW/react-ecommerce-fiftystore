@@ -15,11 +15,16 @@ import { getAllProducts, getAllCategories } from '../utils/API';
 // Import Components
 import { Button } from "../src/components/Button"
 import { Product } from "../src/components/Product"
+import { useSearchContext } from '../src/context/SearchContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ products, categories }) {
   SwiperCore.use([Autoplay]);
+
+  console.log('hi', products, 'li');
+  const { setItemsToSearchFromFn } = useSearchContext();
+  setItemsToSearchFromFn(products);
 
   return (
     <>
@@ -111,7 +116,7 @@ export default function Home({ products, categories }) {
 }
 
 export const getStaticProps = async () => {
-  const products = await getAllProducts('products?limit=6');
+  const products = await getAllProducts('products');
   const categories = await getAllCategories();
   return {
     props: {
