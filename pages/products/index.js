@@ -131,17 +131,15 @@ export default function Products({ products, categories }) {
                     <h2 className="uppercase font-bold text-white absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-3xl xl:text-6xl text-center">All Products</h2>
                 </div>
                 <main className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-baseline justify-between border-b border-gray-200 pt-6 pb-6">
-                        <div className="flex items-center">
-                            <button
-                                type="button"
-                                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
-                                onClick={() => setMobileFiltersOpen(true)}
-                            >
-                                <span className="sr-only">Filters</span>
-                                <FunnelIcon className="h-5 w-5" aria-hidden="true" />
-                            </button>
-                        </div>
+                    <div className="flex items-center">
+                        <button
+                            type="button"
+                            className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+                            onClick={() => setMobileFiltersOpen(true)}
+                        >
+                            <span className="sr-only">Filters</span>
+                            <FunnelIcon className="h-5 w-5" aria-hidden="true" />
+                        </button>
                     </div>
                     <section aria-labelledby="products-heading" className="pt-6 pb-24">
                         <h2 id="products-heading" className="sr-only">
