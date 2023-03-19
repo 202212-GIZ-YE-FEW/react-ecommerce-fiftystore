@@ -14,9 +14,9 @@ import 'swiper/css/scrollbar';
 import { getAllProducts, getAllCategories } from '../utils/API';
 
 // Import Components
-import { Button } from "../src/components/Button"
-import { Product } from "../src/components/Product"
-import { useSearchContext } from '../src/context/SearchContext';
+import { Button } from "../components/Button"
+import { Product } from "../components/Product"
+import { useSearchContext } from '../context/SearchContext';
 
 const inter = Inter({ subsets: ['latin'] })
 

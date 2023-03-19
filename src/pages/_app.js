@@ -1,8 +1,8 @@
 import '@/styles/globals.css'
 import {useState} from 'react'
-import Navbar from '../src/components/Navbar'
-import Footer from '../src/components/Footer'
-import { SearchProvider } from '../src/context/SearchContext'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { SearchProvider } from '../context/SearchContext'
 
 export default function App({ Component, pageProps }) {
   // Get menu data via GraphQL query in `pageProps`.

@@ -6,9 +6,9 @@ import { FunnelIcon } from '@heroicons/react/20/solid'
 import { getAllProducts, getAllCategories } from '../../utils/API';
 
 // Import Components
-import { Product } from "../../src/components/Product"
+import { Product } from "../../components/Product"
 
-import { useSearchContext } from '../../src/context/SearchContext';
+import { useSearchContext } from '../../context/SearchContext';
 
 export default function Products({ products, categories }) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);

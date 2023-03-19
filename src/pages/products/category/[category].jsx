@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useSearchContext } from '../../../src/context/SearchContext';
+import { useSearchContext } from '../../../context/SearchContext';
 import { getAllCategories, getAllProductsByCategory } from '../../../utils/API';
-import { Product } from "../../../src/components/Product"
+import { Product } from "../../../components/Product"
 function CategoryProducts({ products, category }) {
 
     const {setItemsToSearchFromFn} = useSearchContext();
