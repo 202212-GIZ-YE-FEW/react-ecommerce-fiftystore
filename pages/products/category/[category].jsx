@@ -1,4 +1,4 @@
-import { React } from "react";
+import { useEffect } from "react";
 import { useSearchContext } from '../../../src/context/SearchContext';
 import { getAllCategories, getAllProductsByCategory } from '../../../utils/API';
 import { Product } from "../../../src/components/Product"
