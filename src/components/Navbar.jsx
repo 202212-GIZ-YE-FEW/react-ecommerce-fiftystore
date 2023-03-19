@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Popover } from '@headlessui/react'
 import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
 
@@ -7,11 +6,11 @@ import { Search } from "./Search";
 
 const navigation = {
   pages: [
-    { name: 'All Products', href: '#' },
+    { name: 'All Products', href: '/products' },
   ],
 }
 
-export default function Navbar({ projects }) {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   
@@ -39,20 +38,19 @@ export default function Navbar({ projects }) {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link href="/">
+                <Link href="/" className="text-lg font-bold">
                   <span className="sr-only">FiftyStore</span>
                   <img
                     className="h-8 w-50"
                     src="/logo_fifty.png"
                     alt=""
                   />
-               
                 </Link>
               </div>
 
               <div className="ml-auto flex">
                 {/* Search */}
-                <Search data={projects} />
+                <Search />
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">

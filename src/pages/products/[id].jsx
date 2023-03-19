@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useState, useEffect } from 'react';
-import { Button } from "../../src/components/Button";
+import { Button } from "../../components/Button";
 import { getAllProducts } from '../../utils/API';
 import { StarIcon, Bars3CenterLeftIcon } from '@heroicons/react/24/outline';
 
