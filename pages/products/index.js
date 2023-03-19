@@ -8,10 +8,14 @@ import { getAllProducts, getAllCategories } from '../../utils/API';
 // Import Components
 import { Product } from "../../src/components/Product"
 
+import { useSearchContext } from '../../src/context/SearchContext';
 
 export default function Products({ products, categories }) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
     const [ categoryFilter , setCategoryFilter ] = useState([]);
+
+    const { setItemsToSearchFromFn } = useSearchContext();
+    setItemsToSearchFromFn(products);
 
     const filters = [
     {

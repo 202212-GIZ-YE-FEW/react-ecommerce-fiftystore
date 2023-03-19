@@ -22,7 +22,6 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({ products, categories }) {
   SwiperCore.use([Autoplay]);
 
-  console.log('hi', products, 'li');
   const { setItemsToSearchFromFn } = useSearchContext();
   setItemsToSearchFromFn(products);
 
