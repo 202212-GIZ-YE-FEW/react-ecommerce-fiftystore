@@ -1,5 +1,5 @@
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { FunnelIcon } from '@heroicons/react/20/solid'
@@ -15,7 +15,10 @@ export default function Products({ products, categories }) {
     const [ categoryFilter , setCategoryFilter ] = useState([]);
 
     const { setItemsToSearchFromFn } = useSearchContext();
-    setItemsToSearchFromFn(products);
+
+    useEffect(()=>{
+        setItemsToSearchFromFn(products);
+    }, []);
 
     const filters = [
     {

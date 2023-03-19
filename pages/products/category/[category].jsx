@@ -5,7 +5,10 @@ import { Product } from "../../../src/components/Product"
 function CategoryProducts({ products, category }) {
 
     const {setItemsToSearchFromFn} = useSearchContext();
-    setItemsToSearchFromFn(products)
+
+    useEffect(()=>{
+        setItemsToSearchFromFn(products);
+    }, []);
 
     return (
         <>

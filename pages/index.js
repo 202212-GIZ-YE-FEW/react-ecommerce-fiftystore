@@ -23,7 +23,10 @@ export default function Home({ products, categories }) {
   SwiperCore.use([Autoplay]);
 
   const { setItemsToSearchFromFn } = useSearchContext();
-  setItemsToSearchFromFn(products);
+
+  useEffect(()=>{
+    setItemsToSearchFromFn(products);
+}, []);
 
   return (
     <>
