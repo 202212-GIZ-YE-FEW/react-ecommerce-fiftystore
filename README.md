@@ -30,9 +30,9 @@
 
 
 
-##Installation
-- npm install               // Installs the node modules
-- npm run dev.              // to run the code 
+## Installation
+-  npm install               // Installs the node modules
+-  npm run dev.              // to run the code 
 
 
  ## Tools used
