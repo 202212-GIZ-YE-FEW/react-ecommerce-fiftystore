@@ -1,7 +1,7 @@
 
 ## Ecommerce-fiftystore.
 
-## Project Description 
+
 
 ## Hero Section 
 
@@ -23,6 +23,7 @@
 
 <img width="1512" alt="img10" src="https://user-images.githubusercontent.com/49036484/225689718-45ecde42-e13f-49f3-bedd-0d8393c64572.png">
 
+## Project Description 
 
 * E-commerce is a business model that involves transactions taking place on the internet. It typically involves buying and selling products and services online, and often includes features like product listings, shopping carts, and payment gateways. 
 
