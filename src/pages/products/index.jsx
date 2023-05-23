@@ -46,6 +46,7 @@ export default function Products({ products, categories }) {
     return (
         <>
             <Head>
+                <link rel="shortcut icon" href="/fifty_logo.ico" type="image/x-icon" />
                 <title>FiftyStore - All Products</title>
             </Head>
             <div className="bg-white">
