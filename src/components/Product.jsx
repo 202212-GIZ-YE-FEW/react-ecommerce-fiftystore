@@ -47,8 +47,8 @@ export const Product = (props) => {
                                 return <StarIcon key={i} className="w-5 h-5 text-yellow-500" fill="currentColor"/>
                         })}
                     </div>
-                    <div className="flex justify-between items-center">
-                        <span className="text-3xl font-bold text-gray-900">${price}</span>
+                    <div className="flex flex-col sm:flex-row justify-between items-center">
+                        <span className="text-2xl lg:text-3xl font-bold text-gray-900 mb-5 sm:mb-0">${price}</span>
                         <Button content={"Add To Cart"} handleClickFun={() => addToCart(props)} />
                     </div>
                 </div>

@@ -79,41 +79,44 @@ function SingleProduct({ product }) {
     return (
         <>
             <Head>
+                <link rel="shortcut icon" href="/fifty_logo.ico" type="image/x-icon" />
                 <title>{`FiftyStore - ${product.title}`}</title>
             </Head>
-            <div className="lg:min-h-[27rem] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:px-8 mt-10 flex items-center justify-center space-x-20">
-                <div className="w-1/3">
-                    <img className="object-fill w-60" src={product.image} alt={`${product.title} image`} />
-                </div>
-                <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 text-3xl font-bold tracking-tight">{product.title}</h5>
-                    <div className="flex flex-wrap">
-                        <Bars3CenterLeftIcon className="object-fill h-6 text-orange-400" />
-                        <h3 className="mb-2 text-1xl font-bold"> Product Details</h3>
+            <div className="lg:min-h-[27rem] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:px-8 mt-10">
+                <div className="flex flex-col md:flex-row items-center justify-center lg:space-x-20">
+                    <div className="w-full lg:w-1/3">
+                        <img className="object-cover w-60" src={product.image} alt={`${product.title} image`} />
                     </div>
-                    <p className="mb-3 font-normal">{product.description}</p>
-                    <h4 className="mb-2 text-1xl font-bold tracking-tight">${product.price}</h4>
-                    <div className="flex flex-wrap">
-                        <h5 className="mb-2 text-1xl font-bold">{product.rating.rate}</h5>
-                        <StarIcon className="object-fill h-5 w-5 text-orange-400" />
-                    </div>
-                    <div className="flex flex-wrap">
-                        <button
-                            onClick={() => decreaseQuantity(product.id)}
+                    <div className="w-full lg:w-3/4 flex flex-col justify-between p-4">
+                        <h5 className="mb-5 text-3xl font-bold tracking-tight">{product.title}</h5>
+                        <div className="flex my-2">
+                            {[1, 2, 3, 4, 5].map((i)=> {
+                                if(i < Math.round(product.rating.rate))
+                                    return <StarIcon key={i} className="w-5 h-5 text-stone-400"/>
+                                else
+                                    return <StarIcon key={i} className="w-5 h-5 text-yellow-500" fill="currentColor"/>
+                            })}
+                        </div>
+                        <p className="mb-3 font-normal">{product.description}</p>
+                        <h4 className="mb-2 text-1xl font-bold tracking-tight">${product.price}</h4>
+                        <div className="flex flex-wrap">
+                            <button
+                                onClick={() => decreaseQuantity(product.id)}
 
-                            className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
-                        >
-                            -
-                        </button>
-                        <span className="px-2 text-gray-700"> {getProductQuantity(product.id)}</span>
-                        <button
-                            onClick={() => increaseQuantity(product.id)}
-                            className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
-                        >
-                            +
-                        </button>
+                                className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
+                            >
+                                -
+                            </button>
+                            <span className="px-2 text-gray-700"> {getProductQuantity(product.id)}</span>
+                            <button
+                                onClick={() => increaseQuantity(product.id)}
+                                className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
+                            >
+                                +
+                            </button>
+                        </div>
+                        <Button additional_style="btn mt-6 w-fit" content={"Add To Cart"} handleClickFun={() => addToCart(product)} />
                     </div>
-                    <Button additional_style="btn mt-6 w-fit" content={"Add To Cart"} handleClickFun={() => addToCart(product)} />
                 </div>
             </div>
         </>

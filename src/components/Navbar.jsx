@@ -61,7 +61,7 @@ export default function Navbar() {
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
                     />
-                    <span className="bg-red-600 text-white text-sm font-medium px-2 py-0.5 rounded-full group-hover:bg-red-800 dark:bg-red-900 dark:text-red-300 absolute bottom-5 left-5">{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
+                    <span className="bg-red-600 text-white text-sm font-medium px-2 py-0.5 rounded-full group-hover:bg-red-800 absolute bottom-5 left-3 lg:left-5">{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>
