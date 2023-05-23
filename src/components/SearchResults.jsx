@@ -2,8 +2,8 @@ import Link from "next/link"
 export const SearchResults = ({ searchResults, onClick }) => {
     return (
         <>
-            <div className="font-bold">{searchResults.length} <span className="text-gray-400">Results</span></div>
             <ul role="list" className="divide-y divide-gray-200 flex flex-col justify-between items-center w-full lg:w-3/4 absolute top-20 left-1/2 -translate-x-1/2 rounded-md bg-white py-3 px-4 shadow-lg max-h-60 overflow-x-hidden overflow-y-auto">
+                <li className="font-bold">{searchResults.length} <span className="text-gray-400">Results</span></li>
                 {searchResults.map((res) => 
                     <li className="py-2 self-center sm:py-4 hover:bg-gray-300 w-full" key={res.id}>
                         <Link href={`/products/${res.id}`} onClick={onClick}>

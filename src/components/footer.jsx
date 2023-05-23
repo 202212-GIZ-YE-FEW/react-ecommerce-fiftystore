@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import Link from "next/link";
-import CategoryContext from "../context/CategoryContext";
+import { useCategoryContext } from '../context/CategoryContext';
 
 function Footer() {
-    const {categories} = useContext(CategoryContext);
+    const {categories} = useCategoryContext();
     return (
         <footer className="bg-gray-100 mt-10 ">
             <hr />

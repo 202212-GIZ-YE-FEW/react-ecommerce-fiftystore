@@ -1,5 +1,5 @@
-import { createContext, useState } from "react";
-import { getAllCategories } from '../../utils/API';
+import { createContext, useState, useContext } from "react";
+import { getAllCategories } from '../utils/API';
 const CategoryContext = createContext();
 
 export function CategoryProvider({ children }){
@@ -11,4 +11,7 @@ export function CategoryProvider({ children }){
         </CategoryContext.Provider>
     )
 }
-export default CategoryContext;
+// Export useContext Hook.
+export function useCategoryContext() {
+	return useContext(CategoryContext);
+}
