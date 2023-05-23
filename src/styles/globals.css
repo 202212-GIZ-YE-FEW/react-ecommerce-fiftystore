@@ -14,39 +14,6 @@ img, video {
     object-fit: cover;
 }
 
-/** HOME **/
-/* Swiper Slide   */
-/* .swiper-wrapper {
-    --left: clamp(1%, 4.5%, 50%) !important;
-    position: relative;
-    left: var(--left);
-} */
-
-.swiper {
-    display: flex;
-}
-
-.swiper img {
-    width: 100vw !important;
-}
-
-/* 
-.swiper-pagination {
-    bottom: 100px !important;
-} */
-
-.swiper-pagination-bullet-active {
-    transition: width .7s ease-in-out;
-    width: 60px !important;
-    border-radius: 10px !important;
-    background-color: rgb(0 0 0) !important;
-    /* line-height: 20px; */
-}
-
-/* .swiper-slide-active {
-    width: clamp(200px, 90vw, 100rem) !important;
-} */
-
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 10px;
