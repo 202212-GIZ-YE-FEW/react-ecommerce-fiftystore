@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from "next/image";
 import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
 
@@ -38,12 +39,13 @@ export default function Navbar() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link href="/" className="text-lg font-bold">
-                  <span className="sr-only">FiftyStore</span>
-                  <img
-                    className="h-8 w-50"
+                <Link href="/">
+                  <span className="sr-only hidden">FiftyStore</span>
+                  <Image
                     src="/logo_fifty.png"
                     alt=""
+                    width={80}
+                    height={80}
                   />
                 </Link>
               </div>
