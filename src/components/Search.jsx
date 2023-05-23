@@ -33,7 +33,7 @@ export const Search = ({ data }) => {
                                 placeholder="Search..." 
                                 value={searchState}
                                 onChange={(e) => {setSearchState(e.target.value)}} />
-                                <SearchResults searchResults={searchResults} />
+                                <SearchResults searchResults={searchResults} onClick={(e) => setSearchModal(!searchModal)} />
                         </div>
                     </div>
 

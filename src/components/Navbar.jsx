@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Popover } from '@headlessui/react'
+import Image from "next/image";
 import { Bars3Icon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import Link from "next/link"
 
@@ -40,13 +40,13 @@ export default function Navbar({ projects }) {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                  <span className="sr-only">FiftyStore</span>
-                  {/* <img
-                    className="h-8 w-auto"
+                  <span className="sr-only hidden">FiftyStore</span>
+                  <Image
                     src="/logo_fifty.png"
                     alt=""
-                  /> */}
-                  Logo
+                    width={80}
+                    height={80}
+                  />
                 </Link>
               </div>
 
