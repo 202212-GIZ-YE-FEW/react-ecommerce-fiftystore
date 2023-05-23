@@ -90,7 +90,7 @@ export default function Home({ products, categories }) {
 }
 
 export const getStaticProps = async () => {
-  const products = await getAllProducts('products');
+  const products = await getAllProducts('products?limit=6');
   const categories = await getAllCategories();
   return {
     props: {

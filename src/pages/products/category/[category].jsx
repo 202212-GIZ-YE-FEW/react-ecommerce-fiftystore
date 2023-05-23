@@ -14,7 +14,7 @@ function CategoryProducts({ products, category }) {
     return (
         <>
             <Head>
-                <title>FiftyStore - {category} products</title>
+                <title>{`FiftyStore - ${category} products`}</title>
             </Head>
             <div className="full-screen h-60 mb-10 relative" style={{ backgroundImage: `url(https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2022/12/d100042054958420958409285094.jpg)`, backgroundSize: 'cover' }}>
             <h2 className="uppercase font-bold text-white absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-3xl xl:text-6xl text-center">{ category }</h2>

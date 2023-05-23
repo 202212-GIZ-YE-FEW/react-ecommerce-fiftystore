@@ -1,10 +1,9 @@
 import { React } from "react";
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { Button } from "../../src/components/Button";
+import { Button } from "../../components/Button";
 import { getAllProducts } from '../../utils/API';
 import { StarIcon, Bars3CenterLeftIcon } from '@heroicons/react/24/outline';
-
 function SingleProduct({ product }) {
 
     const [cartItems, setCartItems] = useState([]);
@@ -80,15 +79,17 @@ function SingleProduct({ product }) {
     return (
         <>
             <Head>
-                <title>FiftyStore - {product.title}</title>
+                <title>{`FiftyStore - ${product.title}`}</title>
             </Head>
-            <div className="flex items-center justify-center m-10">
-                <img className="object-fill h-100 w-96" src={product.image} alt="" />
+            <div className="lg:min-h-[27rem] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:px-8 mt-10 flex items-center justify-center space-x-20">
+                <div className="w-1/3">
+                    <img className="object-fill w-60" src={product.image} alt={`${product.title} image`} />
+                </div>
                 <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className="mb-2 text-3xl font-bold tracking-tight">{product.title}</h5>
                     <div className="flex flex-wrap">
-                        <h3 className="mb-2 text-1xl font-bold">Product Details</h3>
                         <Bars3CenterLeftIcon className="object-fill h-6 text-orange-400" />
+                        <h3 className="mb-2 text-1xl font-bold"> Product Details</h3>
                     </div>
                     <p className="mb-3 font-normal">{product.description}</p>
                     <h4 className="mb-2 text-1xl font-bold tracking-tight">${product.price}</h4>
@@ -104,17 +105,15 @@ function SingleProduct({ product }) {
                         >
                             -
                         </button>
-
                         <span className="px-2 text-gray-700"> {getProductQuantity(product.id)}</span>
-
                         <button
                             onClick={() => increaseQuantity(product.id)}
                             className="bg-gray-200 text-gray-700 px-2 py-1 rounded-md focus:outline-none"
                         >
                             +
                         </button>
-                        <Button className="btn" content={"Add To Cart"} handleClickFun={() => addToCart(product)} />
                     </div>
+                    <Button additional_style="btn mt-6 w-fit" content={"Add To Cart"} handleClickFun={() => addToCart(product)} />
                 </div>
             </div>
         </>

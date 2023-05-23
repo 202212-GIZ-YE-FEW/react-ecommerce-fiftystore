@@ -5,7 +5,7 @@ import { useCategoryContext } from '../context/CategoryContext';
 function Footer() {
     const {categories} = useCategoryContext();
     return (
-        <footer className="bg-gray-100 mt-10 ">
+        <footer className="bg-gray-100 mt-10">
             <hr />
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 container md:p-6 p-4 md:flex md:items-center md:justify-between">
                 <div className="flex sm:items-center justify-center">
