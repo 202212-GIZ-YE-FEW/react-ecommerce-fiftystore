@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useCategoryContext } from '../context/CategoryContext';
 
-function Footer() {
+export default function Footer() {
     const {categories} = useCategoryContext();
     return (
         <footer className="bg-gray-100 mt-10">
@@ -54,5 +54,3 @@ function Footer() {
         </footer>
     );
 }
-
-export default Footer;
